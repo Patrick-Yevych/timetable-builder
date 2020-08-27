@@ -1,0 +1,37 @@
+----------
+ID: USERSTORY 1.1
+NAME: minimize
+OWNER: Patrick Yevych
+STATUS: NotStarted
+PRIORITY: 1
+ESTIMATE: 1 Hour ACTUAL:
+ISSUE: Implement the minimize function under the graph class which returns an arraylist of sections
+such that the total downtime between all the sections is the minimized.
+----------
+----------
+ID: USERSTORY 1.21
+NAME: section list UI
+OWNER: Patrick Yevych
+STATUS: NotStarted
+PRIORITY: 1
+ESTIMATE: 4 Hours ACTUAL:
+ISSUE: Add UI so users can see the list of sections and section details currently in Graph.V
+----------
+----------
+ID: USERSTORY 1.22
+NAME: section add control
+OWNER: Patrick Yevych
+STATUS: NotStarted
+PRIORITY: 2
+ESTIMATE: 3 Hours ACTUAL:
+ISSUE: Add UI controls that lets users add sections
+----------
+----------
+ID: USERSTORY 1.23
+NAME: section remove control
+OWNER: Patrick Yevych
+STATUS: NotStarted
+PRIORITY: 2
+ESTIMATE: 3 Hours ACTUAL:
+ISSUE: Add UI controls that lets users remove sections
+----------
