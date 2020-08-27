@@ -13,6 +13,17 @@ public class Section {
     private String code;
 
     public Section(int startTime, int finishTime, int day, int type, String code) {
+        this.startTime = 0;
+        this.finishTime = 0;
+        this.day = 0;
+        this.type = LEC;
+        this.code = "";
+
+        this.setStartTime(startTime);
+        this.setFinishTime(finishTime);
+        this.setDay(day);
+        this.setType(type);
+        this.setCode(code);
     }
 
     public int getStartTime() { return this.startTime; }
@@ -56,20 +67,24 @@ public class Section {
     public void setCode(String code) { this.code = code; }
 
     public static int dist(Section s1, Section s2) {
-        if (s1.getStartTime() >= s2.getFinishTime())
+        if (s1.getStartTime() >= s2.getFinishTime()) {
             return s1.getStartTime() - s2.getFinishTime();
-        else if (s2.getStartTime() >= s1.getFinishTime())
+        }
+        else if (s2.getStartTime() >= s1.getFinishTime()) {
             return s2.getStartTime() - s1.getFinishTime();
+        }
         return -1;
     }
 
     public static boolean isOverlap(Section s1, Section s2) {
         if ((s1.getStartTime() <= s2.getStartTime() && s2.getStartTime() < s1.getFinishTime()) ||
-                (s1.getStartTime() < s2.getFinishTime() && s2.getFinishTime() <= s1.getFinishTime()))
-                    return true;
+                (s1.getStartTime() < s2.getFinishTime() && s2.getFinishTime() <= s1.getFinishTime())) {
+            return true;
+        }
         else if ((s2.getStartTime() <= s2.getStartTime() && s1.getStartTime() < s2.getFinishTime()) ||
-                (s2.getStartTime() < s1.getFinishTime() && s1.getFinishTime() <= s2.getFinishTime()))
-                    return true;
+                (s2.getStartTime() < s1.getFinishTime() && s1.getFinishTime() <= s2.getFinishTime())) {
+            return true;
+        }
         return false;
     }
 }
