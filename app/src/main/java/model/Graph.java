@@ -47,6 +47,40 @@ public class Graph {
                     this.E.get(i).remove(j);
                 }
             }
+    }
+}
+
+    public ArrayList<Section> minimize(int required) {
+        ArrayList<Section> res = new ArrayList<Section>();
+        Integer[] curr_tt = new Integer[this.V.size()];
+        Integer[] best_tt = new Integer[this.V.size()];
+        Integer[] avail = new Integer[this.V.size()];
+
+        Integer best_dt = 9999;
+        Integer curr_dt = 0;
+        Integer best_size = 0;
+
+        for (int i = 0; i < this.V.size(); i++) {
+            avail[i] = this.V.size();
+            curr_tt[i] = 0;
+            best_tt[i] = 0;
         }
+
+        curr_tt[required] = 1;
+
+        _path(required, avail, curr_tt, best_tt, curr_dt, best_dt, best_size, 1);
+
+        return res;
+    }
+
+    private void _path(int curr, Integer[] avail, Integer[] curr_tt, Integer[] best_tt, Integer curr_dt, Integer best_dt, Integer best_size, int depth) {
+        for (int i = 0; i < this.E.get(curr).size(); i++) {
+            avail[this.E.get(curr).get(i).getVertex()]++;
+            if (avail[this.E.get(curr).get(i).getVertex()] > this.V.size()) {
+                this.E.get(curr).get(i).setVisited(true);
+            }
+        }
+
+        
     }
 }

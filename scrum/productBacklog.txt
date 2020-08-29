@@ -2,7 +2,7 @@
 ID: USERSTORY 1.1
 NAME: minimize
 OWNER: Patrick Yevych
-STATUS: NotStarted
+STATUS: InProgress
 PRIORITY: 1
 ESTIMATE: 1 Hour ACTUAL:
 ISSUE: Implement the minimize function under the graph class which returns an arraylist of sections
