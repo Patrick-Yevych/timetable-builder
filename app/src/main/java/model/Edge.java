@@ -8,6 +8,7 @@ public class Edge {
     public Edge(int weight, int vertex) {
         this.weight = 0;
         this.vertex = 0;
+        this.visited = false;
 
         this.setVertex(vertex);
         this.setWeight(weight);

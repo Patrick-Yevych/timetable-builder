@@ -70,6 +70,12 @@ public class Graph {
 
         _path(required, avail, curr_tt, best_tt, curr_dt, best_dt, best_size, 1);
 
+        for (int i = 0; i < this.V.size(); i++) {
+            if (best_tt[i] == 1) {
+                res.add(this.V.get(i));
+            }
+        }
+
         return res;
     }
 
@@ -81,6 +87,32 @@ public class Graph {
             }
         }
 
-        
+        for (int i = 0; i < this.E.get(curr).size() && (curr_dt <= best_dt || depth < best_size); i++) {
+            if (avail[i] - depth >= this.V.size()) {
+                curr_tt[this.E.get(curr).get(i).getVertex()] = 1;
+                curr_dt += this.E.get(curr).get(i).getWeight();
+                this.E.get(curr).get(i).setVisited(true);
+                _path(this.E.get(curr).get(i).getVertex(), avail, curr_tt, best_tt, curr_dt, best_dt, best_size, depth + 1);
+                curr_tt[this.E.get(curr).get(i).getVertex()] = 0;
+                curr_dt -= this.E.get(curr).get(i).getWeight();
+            }
+        }
+
+        if (depth > best_size || (depth == best_size && curr_dt < best_dt)) {
+            best_size = depth;
+            best_dt = curr_dt;
+            for (int i = 0; i < this.V.size(); i++) {
+                best_tt[i] = curr_tt[i];
+            }
+        }
+
+        int avail_prev = avail[curr];
+        avail[curr] = -1 * this.V.size();
+        for (int i = 0; i < this.E.get(curr).size(); i++) {
+            avail[this.E.get(curr).get(i).getVertex()]--;
+            if (this.E.get(curr).get(i).getVisited() == false) {
+                avail[curr] = avail_prev;
+            }
+        }
     }
 }
