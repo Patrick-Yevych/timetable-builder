@@ -12,15 +12,15 @@ timetable-builder is an android app which assists university students in creatin
 
 ## Usage
 
-# Add Tab
+### Add Tab
 
 <img align = "right" src ="media/add_screen.png">
 
 Users input section information such as the associated course code, type, start and end times, and day using the graphical user interface.
 
-# Sections Tab
+### Sections Tab
 
-# Timetable Tab
+### Timetable Tab
 
 ## License
 
