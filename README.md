@@ -1,5 +1,5 @@
 ## Overview
-timetable-builder is an android app which assists university students in creating their semestre timetables. It uses a graph ADT and pathfinding algorithm to compute a subset of sections such that the total downtime between them is minimized.
+timetable-builder is an android app which assists university students in creating their semester timetables. It uses a graph ADT and pathfinding algorithm to compute a subset of sections such that the total downtime between them is minimized.
 
 ## Table of Contents
 - [Overview](#overview)
