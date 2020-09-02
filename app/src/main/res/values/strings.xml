@@ -1,6 +1,47 @@
 <resources>
     <string name="app_name">TimetableBuilder</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Add</string>
+    <string name="title_dashboard">Sections</string>
+    <string name="title_notifications">Timetable</string>
+    <string-array name="type_choices">
+        <item>Lecture</item>
+        <item>Tutorial</item>
+    </string-array>
+    <string-array name="start_choices">
+        <item>9:00am</item>
+        <item>10:00am</item>
+        <item>11:00am</item>
+        <item>12:00am</item>
+        <item>1:00pm</item>
+        <item>2:00pm</item>
+        <item>3:00pm</item>
+        <item>4:00pm</item>
+        <item>5:00pm</item>
+        <item>6:00pm</item>
+        <item>7:00pm</item>
+        <item>8:00pm</item>
+        <item>9:00pm</item>
+    </string-array>
+    <string-array name="finish_choices">
+        <item>9:00am</item>
+        <item>10:00am</item>
+        <item>11:00am</item>
+        <item>12:00am</item>
+        <item>1:00pm</item>
+        <item>2:00pm</item>
+        <item>3:00pm</item>
+        <item>4:00pm</item>
+        <item>5:00pm</item>
+        <item>6:00pm</item>
+        <item>7:00pm</item>
+        <item>8:00pm</item>
+        <item>9:00pm</item>
+    </string-array>
+    <string-array name="day_choices">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
 </resources>
