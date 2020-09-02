@@ -8,6 +8,7 @@ timetable-builder is an android app which assists university students in creatin
   - [Add Tab](#add-tab)
   - [Sections Tab](#sections-tab)
   - [Timetable Tab](#timetable-tab)
+- [License](#license)
 
 ## Usage
 
@@ -20,3 +21,7 @@ Users input section information such as the associated course code, type, start 
 # Sections Tab
 
 # Timetable Tab
+
+## License
+
+This repository is licensed under the GPL-3.0 license. See [LICENSE](LICENSE) for details.
