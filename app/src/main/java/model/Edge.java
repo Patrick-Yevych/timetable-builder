@@ -16,4 +16,9 @@ public class Edge {
     public void setWeight(int dist) { this.weight = dist; }
     public int getVertex() { return this.vertex; }
     public void setVertex(int vertex) { this.vertex = vertex; }
+
+    public void print() {
+        System.out.println(this.getWeight());
+        System.out.println(this.getVertex());
+    }
 }

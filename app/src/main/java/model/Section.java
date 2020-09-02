@@ -87,4 +87,19 @@ public class Section {
         }
         return false;
     }
+
+    public void print() {
+        System.out.println(this.getCode());
+
+        if (this.getType() == LEC)
+            System.out.println("Lecture");
+        else if (this.getType() == TUT)
+            System.out.println("Tutorial");
+        else
+            System.out.println("TYPENULL");
+
+        System.out.println(this.getStartTime());
+        System.out.println(this.getFinishTime());
+        System.out.println(this.getDayString());
+    }
 }

@@ -52,4 +52,19 @@ public class Graph extends Observable {
             }
         }
     }
+
+    public void print() {
+        System.out.println("SECTIONS: \n\n");
+        for (Section v: this.V) {
+            v.print();
+            System.out.println("\n\n");
+        }
+        for (ArrayList<Edge> l: this.E) {
+            for (int i = 0; i < l.size(); i++) {
+                l.get(i).print();
+                System.out.println("\n\n");
+                System.out.println("\n\n");
+            }
+        }
+    }
 }
