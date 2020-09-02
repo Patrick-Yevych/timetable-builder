@@ -3,8 +3,9 @@ package model;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
-public class Graph {
+public class Graph extends Observable {
 
     private ArrayList<Section> V;
     private ArrayList<ArrayList<Edge>> E;
@@ -24,6 +25,8 @@ public class Graph {
                         insertEdge(i, this.V.size()-1);
             }
         }
+
+        this.notifyObservers();
     }
 
     private void insertEdge(int in, int to) {
