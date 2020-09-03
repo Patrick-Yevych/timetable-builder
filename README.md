@@ -31,7 +31,7 @@ Users input section information such as the associated course code, type, start 
 
 timetable-builder is built using [Android Studio](https://developer.android.com/studio).
 
-The organization of this repository is based off of the feature branch workflow. Features are documented in the [scrum](scrum) folder and branches are created for each major feature developement. Ensure that your pull requests follow this organization pattern and you document each feature development in the scrum backlogs.
+The organization of this repository is based off of the feature branch workflow. Features are documented in the [scrum](scrum) folder and branches are created for each major feature development. Ensure that your pull requests follow this organization pattern and you document each feature development in the scrum backlogs.
 
 ## License
 
