@@ -22,8 +22,13 @@ import model.Section;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static Graph S = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        S = new Graph();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);

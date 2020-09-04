@@ -44,6 +44,16 @@ public class Section {
         return "";
     }
 
+    public String getTypeString() {
+        if (this.type == 0) {
+            return "Lecture";
+        }
+        else if (this.type == 1) {
+            return "Tutorial";
+        }
+        return "";
+    }
+
     public void setStartTime(int time) {
         if (0 <= time && time < 168)
             this.startTime = time + this.day*24;

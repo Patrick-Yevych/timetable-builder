@@ -12,7 +12,7 @@ such that the total downtime between all the sections is the minimized.
 ID: USERSTORY 1.21
 NAME: section list UI
 OWNER: Patrick Yevych
-STATUS: NotStarted
+STATUS: InProgress
 PRIORITY: 1
 ESTIMATE: 4 Hours ACTUAL:
 ISSUE: Add UI so users can see the list of sections and section details currently in Graph.V

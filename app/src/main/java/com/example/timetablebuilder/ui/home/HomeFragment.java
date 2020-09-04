@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.timetablebuilder.MainActivity;
 import com.example.timetablebuilder.R;
 
 import java.util.regex.Matcher;
@@ -31,7 +32,7 @@ public class HomeFragment extends Fragment {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        final Graph S = new Graph();
+        final Graph S = MainActivity.S;
 
         final Spinner typeSpinnerObj = (Spinner)root.findViewById(R.id.typeSpinner);
         final Spinner startSpinnerObj = (Spinner)root.findViewById(R.id.startSpinner);
