@@ -21,7 +21,7 @@ ISSUE: Add UI so users can see the list of sections and section details currentl
 ID: USERSTORY 1.22
 NAME: section add control
 OWNER: Patrick Yevych
-STATUS: InProgress
+STATUS: Complete
 PRIORITY: 2
 ESTIMATE: 3 Hours ACTUAL:
 ISSUE: Add UI controls that lets users add sections

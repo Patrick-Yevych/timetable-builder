@@ -33,7 +33,7 @@ public class Section {
             res = String.valueOf(this.getStartTime()).concat(":00am");
         }
         else if (this.getStartTime() > 12) {
-            res = String.valueOf(this.getStartTime()).concat(":00pm");
+            res = String.valueOf(this.getStartTime()-12).concat(":00pm");
         }
         return res;
     }
@@ -44,7 +44,7 @@ public class Section {
             res = String.valueOf(this.getFinishTime()).concat(":00am");
         }
         else if (this.getFinishTime() > 12) {
-            res = String.valueOf(this.getFinishTime()).concat(":00pm");
+            res = String.valueOf(this.getFinishTime()-12).concat(":00pm");
         }
         return res;
     }
