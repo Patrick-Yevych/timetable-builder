@@ -35,3 +35,12 @@ PRIORITY: 2
 ESTIMATE: 3 Hours ACTUAL:
 ISSUE: Add UI controls that lets users remove sections
 ----------
+----------
+ID: USERSTORY 1.3
+NAME: Convert Graph to singleton
+OWNER: Patrick Yevych
+STATUS: NotStarted
+PRIORITY: 3
+ESTIMATE: 1 Hours ACTUAL:
+ISSUE:
+----------

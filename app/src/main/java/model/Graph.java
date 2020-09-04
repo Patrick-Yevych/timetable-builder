@@ -72,7 +72,6 @@ public class Graph extends Observable {
     public int getSize() {
         return this.V.size();
     }
-
     public Section getSection(int i) {
         return this.V.get(i);
     }

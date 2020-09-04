@@ -20,10 +20,8 @@
         <item>6:00pm</item>
         <item>7:00pm</item>
         <item>8:00pm</item>
-        <item>9:00pm</item>
     </string-array>
     <string-array name="finish_choices">
-        <item>9:00am</item>
         <item>10:00am</item>
         <item>11:00am</item>
         <item>12:00am</item>

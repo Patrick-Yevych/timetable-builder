@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 int type = Section.LEC;
                 int startTime = 9;
-                int finishTime = 9;
+                int finishTime = 10;
                 int day = 0;
                 String code = codeTextObj.getText().toString();
 
@@ -58,15 +58,26 @@ public class HomeFragment extends Fragment {
                         type = Section.TUT;
                 }
 
-                Pattern timePattern = Pattern.compile("^(\\d{1,2}):00\\w\\w$");
+                Pattern timePattern = Pattern.compile("^(\\d{1,2}):00(am|pm)$");
                 Matcher matcher = timePattern.matcher(startSpinnerObj.getSelectedItem().toString());
                 if (matcher.find()) {
                     startTime = Integer.parseInt(matcher.group(1));
+                    if (matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") == "pm") {
+                        System.out.println("WOWOWOWOWOW");
+                        startTime += 12;
+                    }
                 }
+                System.out.println(">" + matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") + "<");
                 matcher = timePattern.matcher(finishSpinnerObj.getSelectedItem().toString());
                 if (matcher.find()) {
                     finishTime = Integer.parseInt(matcher.group(1));
+                    if (matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") == "pm") {
+                        System.out.println("WOWOWOWOWOW");
+                        finishTime += 12;
+                    }
                 }
+                System.out.println(">" + matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") + "<");
+                System.out.println(startTime + "to" + finishTime);
 
                 switch(daySpinnerObj.getSelectedItem().toString()) {
                     case "Monday":

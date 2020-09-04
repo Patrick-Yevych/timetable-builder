@@ -19,36 +19,32 @@ public class Section {
         this.type = LEC;
         this.code = "";
 
+        this.setDay(day);
         this.setStartTime(startTime);
         this.setFinishTime(finishTime);
-        this.setDay(day);
         this.setType(type);
         this.setCode(code);
     }
 
-    public int getStartTime() { return this.startTime; }
+    public int getStartTime() { return this.startTime - this.day*24; }
     public String getStartTimeString() {
         String res = "";
-        if (startTime <= 12) {
-            res = String.valueOf(startTime);
-            res.concat(":00am");
+        if (this.getStartTime() <= 12) {
+            res = String.valueOf(this.getStartTime()).concat(":00am");
         }
-        else if (startTime > 12) {
-            res = String.valueOf(startTime);
-            res.concat(":00pm");
+        else if (this.getStartTime() > 12) {
+            res = String.valueOf(this.getStartTime()).concat(":00pm");
         }
         return res;
     }
-    public int getFinishTime() { return this.finishTime; }
+    public int getFinishTime() { return this.finishTime - this.day*24; }
     public String getFinishTimeString() {
         String res = "";
-        if (finishTime <= 12) {
-            res = String.valueOf(finishTime);
-            res.concat(":00am");
+        if (this.getFinishTime() <= 12) {
+            res = String.valueOf(this.getFinishTime()).concat(":00am");
         }
-        else if (finishTime > 12) {
-            res = String.valueOf(finishTime);
-            res.concat(":00pm");
+        else if (this.getFinishTime() > 12) {
+            res = String.valueOf(this.getFinishTime()).concat(":00pm");
         }
         return res;
     }
@@ -79,13 +75,15 @@ public class Section {
     }
 
     public void setStartTime(int time) {
-        if (0 <= time && time < 168)
-            this.startTime = time + this.day*24;
+        if (9 <= time && time < 21) {
+            this.startTime = time + this.day * 24;
+        }
     }
 
     public void setFinishTime(int time) {
-        if (0 <= time && time < 168 && time > this.startTime)
-            this.finishTime = time + this.day*24;
+        if (9 < time && time <= 21 && time > this.getStartTime()) {
+            this.finishTime = time + this.day * 24;
+        }
     }
 
     public void setDay(int day) {
