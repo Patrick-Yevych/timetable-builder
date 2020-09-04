@@ -59,25 +59,22 @@ public class HomeFragment extends Fragment {
                 }
 
                 Pattern timePattern = Pattern.compile("^(\\d{1,2}):00(am|pm)$");
+
                 Matcher matcher = timePattern.matcher(startSpinnerObj.getSelectedItem().toString());
                 if (matcher.find()) {
                     startTime = Integer.parseInt(matcher.group(1));
-                    if (matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") == "pm") {
-                        System.out.println("WOWOWOWOWOW");
+                    if (matcher.group(2).equals("pm")) {
                         startTime += 12;
                     }
                 }
-                System.out.println(">" + matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") + "<");
+
                 matcher = timePattern.matcher(finishSpinnerObj.getSelectedItem().toString());
                 if (matcher.find()) {
                     finishTime = Integer.parseInt(matcher.group(1));
-                    if (matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") == "pm") {
-                        System.out.println("WOWOWOWOWOW");
+                    if (matcher.group(2).equals("pm")) {
                         finishTime += 12;
                     }
                 }
-                System.out.println(">" + matcher.group(2).replaceAll("\\s+", "").replaceAll("\\n", "") + "<");
-                System.out.println(startTime + "to" + finishTime);
 
                 switch(daySpinnerObj.getSelectedItem().toString()) {
                     case "Monday":
