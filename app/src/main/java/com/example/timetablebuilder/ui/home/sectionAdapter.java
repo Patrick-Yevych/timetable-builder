@@ -39,7 +39,7 @@ public class sectionAdapter extends RecyclerView.Adapter<sectionAdapter.sectionV
     @Override
     public void onBindViewHolder(sectionViewHolder holder, int position) {
         Section s = this.S.getSection(position);
-        holder.textView.setText("COURSE: " + s.getCode() + " TYPE: " + s.getTypeString() + " TIME: " + s.getDayString() +  " " + s.getStartTime() + " to " + s.getFinishTime());
+        holder.textView.setText("COURSE: " + s.getCode() + " TYPE: " + s.getTypeString() + " TIME: " + s.getDayString() +  " " + s.getStartTimeString() + " to " + s.getFinishTimeString());
     }
 
     @Override

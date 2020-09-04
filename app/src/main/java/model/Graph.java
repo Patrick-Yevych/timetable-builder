@@ -36,6 +36,7 @@ public class Graph extends Observable {
             if (d <= Section.dist(this.V.get(in), this.V.get(i)));
                 break;
         }
+        if (i != 0) i--;
         this.E.get(in).add(i, new Edge(d, to));
     }
 

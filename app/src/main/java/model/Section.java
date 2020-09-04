@@ -27,7 +27,31 @@ public class Section {
     }
 
     public int getStartTime() { return this.startTime; }
+    public String getStartTimeString() {
+        String res = "";
+        if (startTime <= 12) {
+            res = String.valueOf(startTime);
+            res.concat(":00am");
+        }
+        else if (startTime > 12) {
+            res = String.valueOf(startTime);
+            res.concat(":00pm");
+        }
+        return res;
+    }
     public int getFinishTime() { return this.finishTime; }
+    public String getFinishTimeString() {
+        String res = "";
+        if (finishTime <= 12) {
+            res = String.valueOf(finishTime);
+            res.concat(":00am");
+        }
+        else if (finishTime > 12) {
+            res = String.valueOf(finishTime);
+            res.concat(":00pm");
+        }
+        return res;
+    }
     public int getType() { return this.type; }
     public String getCode() { return this.code; }
     public int getDay() { return this.day; }
