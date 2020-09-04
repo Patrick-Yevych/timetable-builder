@@ -44,3 +44,12 @@ PRIORITY: 3
 ESTIMATE: 1 Hours ACTUAL:
 ISSUE:
 ----------
+----------
+ID: BUG 1.1
+NAME: InsertEdge Array Out of Bounds
+OWNER: Patrick Yevych
+STATUS: NotStarted
+PRIORITY: 1
+ESTIMATE: 2 Hours ACTUAL:
+ISSUE: Adding multiple sections has a change for the app to crash and InsertEdge to throw array index out of bounds
+----------
